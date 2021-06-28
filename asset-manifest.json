@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/pokemon-unite-ui-react/static/css/main.aa14ca5e.chunk.css",
-    "main.js": "/pokemon-unite-ui-react/static/js/main.b3256cd0.chunk.js",
-    "main.js.map": "/pokemon-unite-ui-react/static/js/main.b3256cd0.chunk.js.map",
-    "runtime-main.js": "/pokemon-unite-ui-react/static/js/runtime-main.18b2c8fb.js",
-    "runtime-main.js.map": "/pokemon-unite-ui-react/static/js/runtime-main.18b2c8fb.js.map",
-    "static/js/2.7e70bb27.chunk.js": "/pokemon-unite-ui-react/static/js/2.7e70bb27.chunk.js",
-    "static/js/2.7e70bb27.chunk.js.map": "/pokemon-unite-ui-react/static/js/2.7e70bb27.chunk.js.map",
-    "static/js/3.44b3f173.chunk.js": "/pokemon-unite-ui-react/static/js/3.44b3f173.chunk.js",
-    "static/js/3.44b3f173.chunk.js.map": "/pokemon-unite-ui-react/static/js/3.44b3f173.chunk.js.map",
+    "main.js": "/pokemon-unite-ui-react/static/js/main.bddb84c6.chunk.js",
+    "main.js.map": "/pokemon-unite-ui-react/static/js/main.bddb84c6.chunk.js.map",
+    "runtime-main.js": "/pokemon-unite-ui-react/static/js/runtime-main.ed591cfb.js",
+    "runtime-main.js.map": "/pokemon-unite-ui-react/static/js/runtime-main.ed591cfb.js.map",
+    "static/js/2.813b78c0.chunk.js": "/pokemon-unite-ui-react/static/js/2.813b78c0.chunk.js",
+    "static/js/2.813b78c0.chunk.js.map": "/pokemon-unite-ui-react/static/js/2.813b78c0.chunk.js.map",
+    "static/js/3.4da093ef.chunk.js": "/pokemon-unite-ui-react/static/js/3.4da093ef.chunk.js",
+    "static/js/3.4da093ef.chunk.js.map": "/pokemon-unite-ui-react/static/js/3.4da093ef.chunk.js.map",
     "index.html": "/pokemon-unite-ui-react/index.html",
     "static/css/main.aa14ca5e.chunk.css.map": "/pokemon-unite-ui-react/static/css/main.aa14ca5e.chunk.css.map",
-    "static/js/2.7e70bb27.chunk.js.LICENSE.txt": "/pokemon-unite-ui-react/static/js/2.7e70bb27.chunk.js.LICENSE.txt"
+    "static/js/2.813b78c0.chunk.js.LICENSE.txt": "/pokemon-unite-ui-react/static/js/2.813b78c0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.18b2c8fb.js",
-    "static/js/2.7e70bb27.chunk.js",
+    "static/js/runtime-main.ed591cfb.js",
+    "static/js/2.813b78c0.chunk.js",
     "static/css/main.aa14ca5e.chunk.css",
-    "static/js/main.b3256cd0.chunk.js"
+    "static/js/main.bddb84c6.chunk.js"
   ]
 }
