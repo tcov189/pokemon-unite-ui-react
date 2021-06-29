@@ -1,28 +1,20 @@
-import { useEffect, useState } from 'react'
-import Content from '../Layout/Content'
-import { fetchAllPokemon } from '../services/pokemonUnitApiService';
+import { useEffect, useState } from "react";
+import Content from "../Layout/Content";
+import UniteLoader from "../Global/UniteLoader";
+import usePokemonList from "../hooks/usePokemonList";
 
 function PokemonList() {
-    const [pokemonList, setPokemonList] = useState([]);
+  const pokemonList = usePokemonList();
 
-    const getPokemon = async () => {
-        try {
-            const res = await fetchAllPokemon();
-            console.log(res.data);
-          setPokemonList(res.data.pokemon);
-        } catch (error) {
-          console.error(error);
-        }
-      };
+  const [loading, setLoading] = useState(true);
 
-      useEffect(() => {
-        getPokemon();
-      }, []);
-    return (
-        <Content>
-            This ist the PokemonList
-        </Content>
-    )
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 1000)
+  }, [pokemonList]);
+
+  return <Content>{loading && <UniteLoader loading={loading} />}</Content>;
 }
 
-export default PokemonList
+export default PokemonList;
