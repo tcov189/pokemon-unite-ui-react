@@ -3,6 +3,7 @@ import Content from "../Layout/Content";
 import UniteLoader from "../Global/UniteLoader";
 import usePokemonList from "../hooks/usePokemonList";
 import PokemonListItem from "./PokemonList/PokemonListItem";
+import { Link } from "react-router-dom";
 
 function PokemonList() {
   const pokemonList = usePokemonList();
@@ -25,7 +26,6 @@ function PokemonList() {
 
       {!loading && (
         <div className="flex flex-col">
-
           <div className="flex justify-between items-center my-2">
             <input
               type="search"
@@ -49,27 +49,44 @@ function PokemonList() {
                 <option value="supporter">Supporter</option>
               </select>
             </div>
-
           </div>
           <div className="flex flex-wrap justify-around">
             {pokemonList
               .filter((pokemon) => {
-                if (!pokemon.name.toLowerCase().includes(filterName.toLowerCase())) {
+                if (
+                  !pokemon.name.toLowerCase().includes(filterName.toLowerCase())
+                ) {
                   return false;
                 }
 
-                if (filterAttackType && pokemon.attack_type !== filterAttackType ) {
+                if (
+                  filterAttackType &&
+                  pokemon.attack_type !== filterAttackType
+                ) {
                   return false;
                 }
 
-                if (filterBattleType && pokemon.battle_type !== filterBattleType ) {
+                if (
+                  filterBattleType &&
+                  pokemon.battle_type !== filterBattleType
+                ) {
                   return false;
                 }
 
                 return true;
               })
               .map((pokemon) => {
-                return <PokemonListItem pokemon={pokemon} key={pokemon.id} />;
+                return (
+                  <Link
+                    key={pokemon.id}
+                    to={`/pokemon/${pokemon.id}`}
+                    style={{
+                      flexBasis: "45%",
+                    }}
+                  >
+                    <PokemonListItem pokemon={pokemon} />
+                  </Link>
+                );
               })}
           </div>
         </div>
