@@ -9,6 +9,8 @@ function PokemonList() {
 
   const [loading, setLoading] = useState(true);
 
+  const [filterName, setFilterName] = useState('')
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -22,11 +24,13 @@ function PokemonList() {
       {!loading && (
         <div className="flex flex-col">
           <div className="flex items-center mx-3 my-2">
-            <input type="search" placeholder="Search Pokemon..." className="w-full px-2 py-1" />
+            <input type="search" placeholder="Search Pokemon..." className="w-full px-2 py-1" onChange={(e) => setFilterName(e.target.value)} />
           </div>
           <div className="flex flex-wrap justify-around">
             {
-              pokemonList.map((pokemon) => {
+              pokemonList
+              .filter((pokemon) => pokemon.name.toLowerCase().includes(filterName.toLowerCase()))
+              .map((pokemon) => {
                 return <PokemonListItem pokemon={pokemon} key={pokemon.id} />
               })
             }
