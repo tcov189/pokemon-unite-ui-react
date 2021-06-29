@@ -8,10 +8,11 @@ function PokemonListItem({ pokemon }) {
                 flexBasis: '45%',
             }}
         >
+            <p className="font-bold">{ pokemon.name }</p>
             <div className="w-7/12">
                 <img src={pokemon.image_path} alt={`${pokemon.name} profile`} />
             </div>
-            <p>{ pokemon.name }</p>
+            <p className="text-sm">{ pokemon.battle_type } | { pokemon.attack_type }</p>
         </div>
     )
 }
