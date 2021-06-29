@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Content() {
+function Content({ children }) {
     return (
         <div className="px-2 flex-1">
-            This is where content will go
+            { children }
         </div>
     )
 }
