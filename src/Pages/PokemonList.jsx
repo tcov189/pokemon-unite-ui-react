@@ -20,12 +20,17 @@ function PokemonList() {
       {loading && <UniteLoader loading={loading} />}
 
       {!loading && (
-        <div className="flex flex-wrap justify-center">
-          {
-            pokemonList.map((pokemon) => {
-              return <PokemonListItem pokemon={pokemon} key={pokemon.id} />
-            })
-          }
+        <div className="flex flex-col">
+          <div className="flex items-center mx-3 my-2">
+            <input type="search" placeholder="Search Pokemon..." className="w-full px-2 py-1" />
+          </div>
+          <div className="flex flex-wrap justify-around">
+            {
+              pokemonList.map((pokemon) => {
+                return <PokemonListItem pokemon={pokemon} key={pokemon.id} />
+              })
+            }
+          </div>
         </div>
       )}
     </Content>
