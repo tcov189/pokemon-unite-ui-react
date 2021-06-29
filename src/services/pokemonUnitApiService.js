@@ -2,6 +2,7 @@ export async function fetchAllPokemon() {
   const query = `
   {
     all_pokemon {
+      id
       name
       image_path
       battle_type
