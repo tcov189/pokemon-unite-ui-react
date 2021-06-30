@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Header() {
     return (
@@ -6,9 +7,9 @@ function Header() {
             <div className="pr-5">
                 Nav
             </div>
-            <div>
+            <Link to={"/"}>
                 Pokemon
-            </div>
+            </Link>
         </header>
     )
 }
