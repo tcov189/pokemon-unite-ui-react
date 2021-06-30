@@ -4,6 +4,7 @@ import UniteLoader from "../Global/UniteLoader";
 import useActivePokemon from "../hooks/useActivePokemon";
 import Content from "../Layout/Content";
 import PokemonDetailsHeader from "./PokemonDetails/PokemonDetailsHeader";
+import PokemonDetailsMoves from "./PokemonDetails/PokemonDetailsMoves";
 
 function PokemonDetails() {
   const { id } = useParams();
@@ -25,6 +26,8 @@ function PokemonDetails() {
       {!loading &&
         <div className="flex flex-col">
             <PokemonDetailsHeader pokemon={pokemon} />
+
+            <PokemonDetailsMoves pokemon={pokemon} />
         </div>
     }
     </Content>

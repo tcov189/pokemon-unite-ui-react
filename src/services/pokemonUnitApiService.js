@@ -46,6 +46,7 @@ export async function getPokemon(id) {
       scoring
       support
       moves {
+        id
         name
         slot
         icon_path
