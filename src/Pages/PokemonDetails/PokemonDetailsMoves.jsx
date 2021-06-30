@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import BaseMoveAbilityContainer from "./PokemonDetailsMoves/BaseMoveAbilityContainer";
+import SpecialMoveContainer from "./PokemonDetailsMoves/SpecialMoveContainer";
 
 function PokemonDetailsMoves({ pokemon }) {
   const [activeTab, setActiveTab] = useState("ability");
@@ -32,8 +33,6 @@ function PokemonDetailsMoves({ pokemon }) {
     }
   }
 
-  console.log(specialTwoAttacks)
-
   return (
     <div className="flex flex-col px-3 py-2 bg-gray-400 shadow">
       <div className="flex w-full justify-between">
@@ -49,10 +48,10 @@ function PokemonDetailsMoves({ pokemon }) {
         >
           BA
         </div>
-        <div className="cursor bg-red-500 border border-yellow-300 px-2 py-1">
+        <div className="cursor bg-red-500 border border-yellow-300 px-2 py-1" onClick={() => setActiveTab("special_1")}>
           S1
         </div>
-        <div className="cursor bg-red-500 border border-yellow-300 px-2 py-1">
+        <div className="cursor bg-red-500 border border-yellow-300 px-2 py-1" onClick={() => setActiveTab("special_2")}>
           S2
         </div>
         <div
@@ -78,6 +77,13 @@ function PokemonDetailsMoves({ pokemon }) {
             type="basic"
             description={basicAttack.description}
           />
+        )}
+
+        {activeTab === 'special_1' && (
+            <SpecialMoveContainer moves={specialOneAttacks} />
+        )}
+        {activeTab === 'special_2' && (
+            <SpecialMoveContainer moves={specialTwoAttacks} />
         )}
 
         {activeTab === "unite" && (
