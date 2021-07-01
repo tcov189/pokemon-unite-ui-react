@@ -1,4 +1,4 @@
-export const uniteApiUrl = "http://pokemon-unite-api.test/api";
+export const uniteApiUrl = "https://pokemon-unite-api.trevor-builds-apps.com/api";
 
 export async function fetchAllPokemon() {
   const query = `
