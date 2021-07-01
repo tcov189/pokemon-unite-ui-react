@@ -73,10 +73,10 @@ function PokemonDetailsMoves({ pokemon }) {
         )}
 
         {activeTab === "special_1" && (
-          <SpecialMoveContainer moves={specialOneAttacks} />
+          <SpecialMoveContainer moves={specialOneAttacks} type="special 1" />
         )}
         {activeTab === "special_2" && (
-          <SpecialMoveContainer moves={specialTwoAttacks} />
+          <SpecialMoveContainer moves={specialTwoAttacks} type="special 2" />
         )}
 
         {activeTab === "unite" && (
