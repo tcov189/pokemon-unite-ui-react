@@ -1,3 +1,5 @@
+export const uniteApiUrl = "http://pokemon-unite-api.test/api";
+
 export async function fetchAllPokemon() {
   const query = `
   {
@@ -11,7 +13,7 @@ export async function fetchAllPokemon() {
 }`;
 
   const result = await fetch(
-    "https://pokemon-unite-api.trevor-builds-apps.com/api",
+    uniteApiUrl,
     {
       method: "POST",
       headers: {
@@ -67,7 +69,7 @@ export async function getPokemon(id) {
   }`;
 
   const result = await fetch(
-    "https://pokemon-unite-api.trevor-builds-apps.com/api",
+    uniteApiUrl,
     {
       method: "POST",
       headers: {

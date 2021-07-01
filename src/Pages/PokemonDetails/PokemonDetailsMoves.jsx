@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import BaseMoveAbilityContainer from "./PokemonDetailsMoves/BaseMoveAbilityContainer";
+import MoveIcon from "./PokemonDetailsMoves/MoveIcon";
 import SpecialMoveContainer from "./PokemonDetailsMoves/SpecialMoveContainer";
 
 function PokemonDetailsMoves({ pokemon }) {
@@ -23,46 +24,38 @@ function PokemonDetailsMoves({ pokemon }) {
         uniteAttack = { ...move };
         break;
       case "special 1":
-          specialOneAttacks = [...specialOneAttacks, {...move}]
+        specialOneAttacks = [...specialOneAttacks, { ...move }];
         break;
       case "special 2":
-          specialTwoAttacks = [...specialTwoAttacks, {...move}]
+        specialTwoAttacks = [...specialTwoAttacks, { ...move }];
         break;
       default:
         break;
     }
   }
 
+  const special1Image = specialOneAttacks.find(
+    (move) => move.unlock_level === 1
+  );
+  const special2Image = specialTwoAttacks.find(
+    (move) => move.unlock_level === 3
+  );
+
   return (
-    <div className="flex flex-col px-3 py-2 bg-gray-400 shadow">
-      <div className="flex w-full justify-between">
-        <div
-          className="cursor bg-red-500 border border-yellow-300 px-2 py-1"
-          onClick={() => setActiveTab("ability")}
-        >
-          AB
-        </div>
-        <div
-          className="cursor bg-red-500 border border-yellow-300 px-2 py-1"
-          onClick={() => setActiveTab("basic")}
-        >
-          BA
-        </div>
-        <div className="cursor bg-red-500 border border-yellow-300 px-2 py-1" onClick={() => setActiveTab("special_1")}>
-          S1
-        </div>
-        <div className="cursor bg-red-500 border border-yellow-300 px-2 py-1" onClick={() => setActiveTab("special_2")}>
-          S2
-        </div>
-        <div
-          className="cursor bg-red-500 border border-yellow-300 px-2 py-1"
-          onClick={() => setActiveTab("unite")}
-        >
-          UN
-        </div>
+    <div className="flex flex-col px-2 py-1 bg-gray-400 shadow">
+      <div className="flex w-full justify-between p-1 mb-1 shadow-md">
+        <MoveIcon moveName={`${pokemon.ability_name} icon`} moveIconPath={pokemon.ability_icon_path} onClick={() => setActiveTab("ability")} isActive={activeTab === "ability"} />
+
+        <MoveIcon moveName="Basic attack icon" moveIconPath={basicAttack.icon_path} onClick={() => setActiveTab("basic")} isActive={activeTab === "basic"} />
+
+        <MoveIcon moveName={special1Image.name} moveIconPath={special1Image.icon_path} onClick={() => setActiveTab("special_1")} isActive={activeTab === "special_1"} />
+
+        <MoveIcon moveName={special2Image.name} moveIconPath={special2Image.icon_path} onClick={() => setActiveTab("special_2")} isActive={activeTab === "special_2"} />
+
+        <MoveIcon moveName={uniteAttack.name} moveIconPath={uniteAttack.icon_path} onClick={() => setActiveTab("unite")} isActive={activeTab === "unite"} />
       </div>
 
-      <div className="flex py-2 px-2 bg-red-500 shadow border border-yellow-300">
+      <div className="flex py-2 px-2 ">
         {activeTab === "ability" && (
           <BaseMoveAbilityContainer
             name={pokemon.ability_name}
@@ -79,11 +72,11 @@ function PokemonDetailsMoves({ pokemon }) {
           />
         )}
 
-        {activeTab === 'special_1' && (
-            <SpecialMoveContainer moves={specialOneAttacks} />
+        {activeTab === "special_1" && (
+          <SpecialMoveContainer moves={specialOneAttacks} />
         )}
-        {activeTab === 'special_2' && (
-            <SpecialMoveContainer moves={specialTwoAttacks} />
+        {activeTab === "special_2" && (
+          <SpecialMoveContainer moves={specialTwoAttacks} />
         )}
 
         {activeTab === "unite" && (
