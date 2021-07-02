@@ -1,10 +1,6 @@
 import { ClockIcon, LockOpenIcon } from "@heroicons/react/outline";
-import React from "react";
-import { baseUrl } from "../../../services/pokemonUniteApiService";
-import MoveIcon from "./MoveIcon";
 
 function MoveCard({
-  moveIconPath,
   moveName,
   moveType = null,
   unlockLevel,
@@ -13,18 +9,15 @@ function MoveCard({
   moveDescription,
 }) {
   return (
-    <div className="mb-2">
-      <div className="flex justify-between w-full">
-        <div className="flex items-center">
-          <MoveIcon moveName={moveName} moveIconPath={moveIconPath} width="40px" height="40px" />
-          <div className="flex flex-col capitalize ml-1">
-            {moveType && <span className="font-light text-sm">{moveType}</span>}
-            <p className="font-bold text-lg">{moveName}</p>
-          </div>
+    <div className="mb-2 shadow-sm">
+      <div className="flex justify-between w-full px-1">
+        <div className="flex flex-col capitalize ml-1 py-1">
+          {moveType && <span className="font-light text-sm">{moveType}</span>}
+          <p className="font-bold text-lg">{moveName}</p>
         </div>
 
         {unlockLevel && (
-          <p className="flex items-center">
+          <p className="flex items-center text-lg">
             <LockOpenIcon className="w-4" /> Lv. {unlockLevel}
           </p>
         )}
@@ -40,7 +33,7 @@ function MoveCard({
         </div>
       </div>
 
-      <div className="mt-1">{moveDescription}</div>
+      <div className="px-2 pb-1 text-sm">{moveDescription}</div>
     </div>
   );
 }

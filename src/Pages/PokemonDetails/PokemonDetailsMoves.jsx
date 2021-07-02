@@ -82,7 +82,7 @@ function PokemonDetailsMoves({ pokemon }) {
         />
       </div>
 
-      <div className="flex py-2 px-2 ">
+      <div className="flex py-2">
         {activeTab === "ability" && (
           <BaseMoveAbilityContainer
             name={pokemon.ability_name}

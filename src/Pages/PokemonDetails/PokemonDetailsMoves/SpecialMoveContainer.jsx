@@ -1,10 +1,13 @@
-import React from "react";
-import { ClockIcon } from "@heroicons/react/outline";
+import React, { useState } from "react";
+import { LockOpenIcon } from "@heroicons/react/outline";
 import MoveCard from "./MoveCard";
 import { baseUrl } from "../../../services/pokemonUniteApiService";
+import MoveIcon from "./MoveIcon";
 
 function SpecialMoveContainer({ pokemonId, moves, type }) {
-  const imageFileNamePrefix = type.replace(' ', '_');
+  const [activeTab, setActiveTab] = useState("a");
+
+  const imageFileNamePrefix = type.replace(" ", "_");
 
   return (
     <div className="flex flex-col w-full">
@@ -15,29 +18,54 @@ function SpecialMoveContainer({ pokemonId, moves, type }) {
         moveCategory={moves[0].category}
         moveDescription={moves[0].description}
         unlockLevel="1 or 3"
-        moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${imageFileNamePrefix}.png`}
       />
 
       <div className="flex flex-col">
-        <MoveCard
-          moveName={moves[1].name}
-          moveType={type}
-          cooldown={moves[1].cooldown}
-          moveCategory={moves[1].category}
-          moveDescription={moves[1].description}
-          unlockLevel={moves[1].unlock_level}
-          moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${imageFileNamePrefix}a.png`}
-        />
+        <div className="flex justify-around">
+          <div className="flex my-2">
+            <MoveIcon
+              moveName={moves[1].name}
+              moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${imageFileNamePrefix}a.png`}
+              onClick={() => setActiveTab("a")}
+              isActive={activeTab === "a"}
+            />
+          </div>
 
-        <MoveCard
-          moveName={moves[2].name}
-          moveType={type}
-          cooldown={moves[2].cooldown}
-          moveCategory={moves[2].category}
-          moveDescription={moves[2].description}
-          unlockLevel={moves[2].unlock_level}
-          moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${imageFileNamePrefix}b.png`}
-        />
+          <div className="flex justify-center items-center text-lg">
+            <LockOpenIcon className="w-5" /> Lv. {moves[1].unlock_level}
+          </div>
+
+          <div className="flex">
+            <MoveIcon
+              moveName={moves[2].name}
+              moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${imageFileNamePrefix}b.png`}
+              onClick={() => setActiveTab("b")}
+              isActive={activeTab === "b"}
+            />
+          </div>
+        </div>
+
+        {activeTab === "a" && (
+          <MoveCard
+            moveName={moves[1].name}
+            moveType={type}
+            cooldown={moves[1].cooldown}
+            moveCategory={moves[1].category}
+            moveDescription={moves[1].description}
+            moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${imageFileNamePrefix}a.png`}
+          />
+        )}
+
+        {activeTab === "b" && (
+          <MoveCard
+            moveName={moves[2].name}
+            moveType={type}
+            cooldown={moves[2].cooldown}
+            moveCategory={moves[2].category}
+            moveDescription={moves[2].description}
+            moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${imageFileNamePrefix}b.png`}
+          />
+        )}
       </div>
     </div>
   );
