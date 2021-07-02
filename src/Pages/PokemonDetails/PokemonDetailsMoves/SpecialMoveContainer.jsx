@@ -23,10 +23,22 @@ function SpecialMoveContainer({ pokemonId, moves, type }) {
 
       <div className="flex">
         <div className="flex-1 capitalize">
-          <MoveIcon moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${type.replace(' ', '_')}a.png`} /> {moves[1].name}
+          <MoveIcon
+            moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${type.replace(
+              " ",
+              "_"
+            )}a.png`}
+          />{" "}
+          {moves[1].name}
         </div>
         <div className="flex-1 capitalize">
-        <MoveIcon moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${type.replace(' ', '_')}b.png`} /> {moves[2].name}
+          <MoveIcon
+            moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${type.replace(
+              " ",
+              "_"
+            )}b.png`}
+          />{" "}
+          {moves[2].name}
         </div>
       </div>
     </div>
