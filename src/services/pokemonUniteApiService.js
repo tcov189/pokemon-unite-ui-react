@@ -9,7 +9,6 @@ export async function fetchAllPokemon() {
     all_pokemon {
       id
       name
-      image_path
       battle_type
       attack_type
     }
@@ -38,7 +37,6 @@ export async function getPokemon(id) {
     pokemon(id: ${id}) {
       id
       name
-      image_path
       battle_type
       attack_type
       difficulty
