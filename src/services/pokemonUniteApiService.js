@@ -44,7 +44,6 @@ export async function getPokemon(id) {
       difficulty
       ability_name
       ability_description
-      ability_icon_path
       offense
       endurance
       mobility
@@ -54,7 +53,6 @@ export async function getPokemon(id) {
         id
         name
         slot
-        icon_path
         description
         category
         cooldown
