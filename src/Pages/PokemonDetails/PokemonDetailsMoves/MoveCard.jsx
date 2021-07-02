@@ -11,7 +11,7 @@ function MoveCard({
   return (
     <div className="mb-2 shadow-sm">
       <div className="flex justify-between w-full px-1">
-        <div className="flex flex-col capitalize ml-1 py-1">
+        <div className="flex flex-col capitalize ml-1 py-">
           {moveType && <span className="font-light text-sm">{moveType}</span>}
           <p className="font-bold text-lg">{moveName}</p>
         </div>
@@ -33,7 +33,7 @@ function MoveCard({
         </div>
       </div>
 
-      <div className="px-2 pb-1 text-sm">{moveDescription}</div>
+      <div className="px-2 pb-2 text-sm">{moveDescription}</div>
     </div>
   );
 }
