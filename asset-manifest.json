@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/pokemon-unite-ui-react/static/css/main.9d17dbac.chunk.css",
-    "main.js": "/pokemon-unite-ui-react/static/js/main.3203b763.chunk.js",
-    "main.js.map": "/pokemon-unite-ui-react/static/js/main.3203b763.chunk.js.map",
+    "main.js": "/pokemon-unite-ui-react/static/js/main.4dfcfe8d.chunk.js",
+    "main.js.map": "/pokemon-unite-ui-react/static/js/main.4dfcfe8d.chunk.js.map",
     "runtime-main.js": "/pokemon-unite-ui-react/static/js/runtime-main.05c6c8f4.js",
     "runtime-main.js.map": "/pokemon-unite-ui-react/static/js/runtime-main.05c6c8f4.js.map",
     "static/js/2.b7115120.chunk.js": "/pokemon-unite-ui-react/static/js/2.b7115120.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.05c6c8f4.js",
     "static/js/2.b7115120.chunk.js",
     "static/css/main.9d17dbac.chunk.css",
-    "static/js/main.3203b763.chunk.js"
+    "static/js/main.4dfcfe8d.chunk.js"
   ]
 }
