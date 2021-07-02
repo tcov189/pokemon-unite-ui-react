@@ -7,6 +7,8 @@ function MoveCard({
   moveCategory,
   cooldown,
   moveDescription,
+  upgradeLevel,
+  upgradeEffect,
 }) {
   return (
     <div className="mb-2 shadow-sm">
@@ -33,7 +35,17 @@ function MoveCard({
         </div>
       </div>
 
-      <div className="px-2 pb-2 text-sm">{moveDescription}</div>
+      <div className="px-2 pb-2 text-sm">
+        <p>{moveDescription}</p>
+        {upgradeLevel && (
+          <div className="mt-2">
+            <div className="flex font-bold">
+              Lv. {upgradeLevel}  Upgrade effect
+            </div>
+            {upgradeEffect}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

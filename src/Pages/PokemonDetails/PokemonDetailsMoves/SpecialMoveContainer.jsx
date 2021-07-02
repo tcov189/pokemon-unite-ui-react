@@ -53,6 +53,8 @@ function SpecialMoveContainer({ pokemonId, moves, type }) {
             moveCategory={moves[1].category}
             moveDescription={moves[1].description}
             moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${imageFileNamePrefix}a.png`}
+            upgradeLevel={moves[1].upgrade_level}
+            upgradeEffect={moves[1].upgrade_effect}
           />
         )}
 
@@ -64,6 +66,8 @@ function SpecialMoveContainer({ pokemonId, moves, type }) {
             moveCategory={moves[2].category}
             moveDescription={moves[2].description}
             moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${imageFileNamePrefix}b.png`}
+            upgradeLevel={moves[2].upgrade_level}
+            upgradeEffect={moves[2].upgrade_effect}
           />
         )}
       </div>

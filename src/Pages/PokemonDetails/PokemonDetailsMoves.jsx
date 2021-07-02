@@ -48,7 +48,7 @@ function PokemonDetailsMoves({ pokemon }) {
       <div className="flex w-full justify-between p-1 mb-1 shadow-md">
         <MoveIcon
           moveName={`${pokemon.ability_name} icon`}
-          moveIconPath={pokemon.ability_icon_path}
+          moveIconPath={`${baseUrl}/images/pokemon/${pokemon.id}/ability.png`}
           onClick={() => setActiveTab("ability")}
           isActive={activeTab === "ability"}
         />
@@ -84,10 +84,10 @@ function PokemonDetailsMoves({ pokemon }) {
 
       <div className="flex py-2">
         {activeTab === "ability" && (
-          <BaseMoveAbilityContainer
-            name={pokemon.ability_name}
-            type="ability"
-            description={pokemon.ability_description}
+          <MoveCard
+            moveName={pokemon.ability_name}
+            moveType="ability"
+            moveDescription={pokemon.ability_description}
           />
         )}
 
