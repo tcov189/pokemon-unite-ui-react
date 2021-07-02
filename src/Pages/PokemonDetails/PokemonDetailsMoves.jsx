@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { baseUrl } from "../../services/pokemonUniteApiService";
-import BaseMoveAbilityContainer from "./PokemonDetailsMoves/BaseMoveAbilityContainer";
 import MoveCard from "./PokemonDetailsMoves/MoveCard";
 import MoveIcon from "./PokemonDetailsMoves/MoveIcon";
 import SpecialMoveContainer from "./PokemonDetailsMoves/SpecialMoveContainer";
