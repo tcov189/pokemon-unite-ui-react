@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { baseUrl } from "../../services/pokemonUniteApiService";
-import BaseMoveAbilityContainer from "./PokemonDetailsMoves/BaseMoveAbilityContainer";
 import MoveCard from "./PokemonDetailsMoves/MoveCard";
 import MoveIcon from "./PokemonDetailsMoves/MoveIcon";
 import SpecialMoveContainer from "./PokemonDetailsMoves/SpecialMoveContainer";
@@ -44,8 +43,8 @@ function PokemonDetailsMoves({ pokemon }) {
   );
 
   return (
-    <div className="flex flex-col px-2 py-1 bg-gray-400 shadow">
-      <div className="flex w-full justify-between p-1 mb-1 shadow-md">
+    <div className="flex flex-col px-1 py-1 bg-gray-400 shadow-inner">
+      <div className="flex w-full justify-between p-1 shadow-md">
         <MoveIcon
           moveName={`${pokemon.ability_name} icon`}
           moveIconPath={`${baseUrl}/images/pokemon/${pokemon.id}/ability.png`}
@@ -82,7 +81,7 @@ function PokemonDetailsMoves({ pokemon }) {
         />
       </div>
 
-      <div className="flex py-2">
+      <div className="flex pt-2">
         {activeTab === "ability" && (
           <MoveCard
             moveName={pokemon.ability_name}

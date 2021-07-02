@@ -5,6 +5,7 @@ import useActivePokemon from "../hooks/useActivePokemon";
 import Content from "../Layout/Content";
 import PokemonDetailsHeader from "./PokemonDetails/PokemonDetailsHeader";
 import PokemonDetailsMoves from "./PokemonDetails/PokemonDetailsMoves";
+import ViabilityContainer from "./PokemonDetails/ViabilityContainer";
 
 function PokemonDetails() {
   const { id } = useParams();
@@ -23,13 +24,21 @@ function PokemonDetails() {
     <Content>
       {loading && <UniteLoader loading={loading} />}
 
-      {!loading &&
+      {!loading && (
         <div className="flex flex-col">
-            <PokemonDetailsHeader pokemon={pokemon} />
+          <PokemonDetailsHeader pokemon={pokemon} />
 
-            <PokemonDetailsMoves pokemon={pokemon} />
+          <ViabilityContainer
+            offense={pokemon.offense}
+            endurance={pokemon.endurance}
+            mobility={pokemon.mobility}
+            scoring={pokemon.scoring}
+            support={pokemon.support}
+          />
+
+          <PokemonDetailsMoves pokemon={pokemon} />
         </div>
-    }
+      )}
     </Content>
   );
 }
