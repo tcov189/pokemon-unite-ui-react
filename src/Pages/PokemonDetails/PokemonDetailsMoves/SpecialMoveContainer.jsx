@@ -1,54 +1,43 @@
 import React from "react";
 import { ClockIcon } from "@heroicons/react/outline";
-import MoveIcon from "./MoveIcon";
+import MoveCard from "./MoveCard";
 import { baseUrl } from "../../../services/pokemonUniteApiService";
 
 function SpecialMoveContainer({ pokemonId, moves, type }) {
+  const imageFileNamePrefix = type.replace(' ', '_');
+
   return (
     <div className="flex flex-col w-full">
-      <div className="flex justify-between w-full capitalize">
-        <div className="flex flex-col">
-          <span className="font-light text-sm">{type}</span>
-          <p className="font-bold text-lg">{moves[0].name}</p>
-        </div>
-        <p>Lv. 1 or 3</p>
-        <div className="flex flex-col items-end">
-          <p>{moves[0].category}</p>
-          <div className="flex">
-            {moves[0].cooldown} <ClockIcon className="w-4 text-blue-500 ml-1" />
-          </div>
-        </div>
-      </div>
-      <div className="mt-1">{moves[0].description}</div>
+      <MoveCard
+        moveName={moves[0].name}
+        moveType={type}
+        cooldown={moves[0].cooldown}
+        moveCategory={moves[0].category}
+        moveDescription={moves[0].description}
+        unlockLevel="1 or 3"
+        moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${imageFileNamePrefix}.png`}
+      />
 
       <div className="flex flex-col">
-      <div className="flex justify-between w-full capitalize my-3">
-        <div className="flex flex-col">
-          <p className="font-bold text-lg">{moves[1].name}</p>
-        </div>
-        <p>Lv. 1 or 3</p>
-        <div className="flex flex-col items-end">
-          <p>{moves[1].category}</p>
-          <div className="flex">
-            {moves[1].cooldown} <ClockIcon className="w-4 text-blue-500 ml-1" />
-          </div>
-        </div>
-      </div>
-      <div className="mt-1">{moves[0].description}</div>
+        <MoveCard
+          moveName={moves[1].name}
+          moveType={type}
+          cooldown={moves[1].cooldown}
+          moveCategory={moves[1].category}
+          moveDescription={moves[1].description}
+          unlockLevel={moves[1].unlock_level}
+          moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${imageFileNamePrefix}a.png`}
+        />
 
-      <div className="flex justify-between w-full capitalize my-3">
-        <div className="flex flex-col">
-          <p className="font-bold text-lg">{moves[2].name}</p>
-        </div>
-        <p>Lv. 1 or 3</p>
-        <div className="flex flex-col items-end">
-          <p>{moves[2].category}</p>
-          <div className="flex">
-            {moves[2].cooldown} <ClockIcon className="w-4 text-blue-500 ml-1" />
-          </div>
-        </div>
-      </div>
-      <div className="mt-1">{moves[2].description}</div>
+        <MoveCard
+          moveName={moves[2].name}
+          moveType={type}
+          cooldown={moves[2].cooldown}
+          moveCategory={moves[2].category}
+          moveDescription={moves[2].description}
+          unlockLevel={moves[2].unlock_level}
+          moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${imageFileNamePrefix}b.png`}
+        />
       </div>
     </div>
   );
