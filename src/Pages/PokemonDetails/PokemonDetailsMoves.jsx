@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { baseUrl } from "../../services/pokemonUniteApiService";
 import BaseMoveAbilityContainer from "./PokemonDetailsMoves/BaseMoveAbilityContainer";
 import MoveIcon from "./PokemonDetailsMoves/MoveIcon";
 import SpecialMoveContainer from "./PokemonDetailsMoves/SpecialMoveContainer";
@@ -46,13 +47,13 @@ function PokemonDetailsMoves({ pokemon }) {
       <div className="flex w-full justify-between p-1 mb-1 shadow-md">
         <MoveIcon moveName={`${pokemon.ability_name} icon`} moveIconPath={pokemon.ability_icon_path} onClick={() => setActiveTab("ability")} isActive={activeTab === "ability"} />
 
-        <MoveIcon moveName="Basic attack icon" moveIconPath={basicAttack.icon_path} onClick={() => setActiveTab("basic")} isActive={activeTab === "basic"} />
+        <MoveIcon moveName="Basic attack icon" moveIconPath={`${baseUrl}/images/icons/basic_attack.png`} onClick={() => setActiveTab("basic")} isActive={activeTab === "basic"} />
 
-        <MoveIcon moveName={special1Image.name} moveIconPath={special1Image.icon_path} onClick={() => setActiveTab("special_1")} isActive={activeTab === "special_1"} />
+        <MoveIcon moveName={special1Image.name} moveIconPath={`${baseUrl}/images/pokemon/${pokemon.id}/special_1.png`} onClick={() => setActiveTab("special_1")} isActive={activeTab === "special_1"} />
 
-        <MoveIcon moveName={special2Image.name} moveIconPath={special2Image.icon_path} onClick={() => setActiveTab("special_2")} isActive={activeTab === "special_2"} />
+        <MoveIcon moveName={special2Image.name} moveIconPath={`${baseUrl}/images/pokemon/${pokemon.id}/special_2.png`} onClick={() => setActiveTab("special_2")} isActive={activeTab === "special_2"} />
 
-        <MoveIcon moveName={uniteAttack.name} moveIconPath={uniteAttack.icon_path} onClick={() => setActiveTab("unite")} isActive={activeTab === "unite"} />
+        <MoveIcon moveName={uniteAttack.name} moveIconPath={`${baseUrl}/images/pokemon/${pokemon.id}/unite.png`} onClick={() => setActiveTab("unite")} isActive={activeTab === "unite"} />
       </div>
 
       <div className="flex py-2 px-2 ">
@@ -73,10 +74,10 @@ function PokemonDetailsMoves({ pokemon }) {
         )}
 
         {activeTab === "special_1" && (
-          <SpecialMoveContainer moves={specialOneAttacks} type="special 1" />
+          <SpecialMoveContainer pokemonId={pokemon.id} moves={specialOneAttacks} type="special 1" />
         )}
         {activeTab === "special_2" && (
-          <SpecialMoveContainer moves={specialTwoAttacks} type="special 2" />
+          <SpecialMoveContainer pokemonId={pokemon.id} moves={specialTwoAttacks} type="special 2" />
         )}
 
         {activeTab === "unite" && (

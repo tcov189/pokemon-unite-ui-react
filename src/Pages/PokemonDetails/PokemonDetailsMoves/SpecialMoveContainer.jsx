@@ -1,7 +1,9 @@
 import React from "react";
 import { ClockIcon } from "@heroicons/react/outline";
+import MoveIcon from "./MoveIcon";
+import { baseUrl } from "../../../services/pokemonUniteApiService";
 
-function SpecialMoveContainer({ moves, type }) {
+function SpecialMoveContainer({ pokemonId, moves, type }) {
   return (
     <div className="flex flex-col w-full">
       <div className="flex justify-between w-full capitalize">
@@ -18,6 +20,15 @@ function SpecialMoveContainer({ moves, type }) {
         </div>
       </div>
       <div className="mt-1">{moves[0].description}</div>
+
+      <div className="flex">
+        <div className="flex-1 capitalize">
+          <MoveIcon moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${type.replace(' ', '_')}a.png`} /> {moves[1].name}
+        </div>
+        <div className="flex-1 capitalize">
+        <MoveIcon moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${type.replace(' ', '_')}b.png`} /> {moves[2].name}
+        </div>
+      </div>
     </div>
   );
 }

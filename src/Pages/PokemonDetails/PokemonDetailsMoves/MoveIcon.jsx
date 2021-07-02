@@ -1,6 +1,6 @@
 import React from 'react'
 
-function MoveIcon({ moveName, moveIconPath, onClick = null, isActive = false }) {
+function MoveIcon({ moveIconPath, onClick = null, isActive = false }) {
     const backgroundStyle = {
         backgroundImage: moveIconPath ? `url(${moveIconPath})` : null,
         backgroundSize: 'cover',
