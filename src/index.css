@@ -3,3 +3,23 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.bg-pokemon-profile {
+  @apply bg-gradient-to-br to-gray-600;
+}
+
+.bg-attacker {
+  @apply from-yellow-700;
+}
+.bg-speedster {
+  @apply from-blue-500;
+}
+.bg-all-rounder {
+  @apply from-purple-700;
+}
+.bg-defender {
+  @apply from-green-600;
+}
+.bg-supporter {
+  @apply from-yellow-400;
+}

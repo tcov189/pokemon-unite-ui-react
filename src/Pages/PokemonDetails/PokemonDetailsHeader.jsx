@@ -2,8 +2,9 @@ import React from "react";
 import { baseUrl } from "../../services/pokemonUniteApiService";
 
 function PokemonDetailsHeader({ pokemon }) {
+
   return (
-    <div className="flex space-x-3 px-3 py-2 bg-gray-600 shadow text-gray-300">
+    <div className={`flex space-x-3 px-3 py-2 bg-${pokemon.battle_type} bg-pokemon-profile shadow text-gray-300`}>
       <div className="w-20 border border-yellow-200 rounded-tr-lg">
         <img src={`${baseUrl}/images/pokemon/${pokemon.id}/profile.png`} alt="" />
       </div>
