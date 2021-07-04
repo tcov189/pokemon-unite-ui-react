@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import UniteLoader from "../Global/UniteLoader";
 import useActivePokemon from "../hooks/useActivePokemon";
 import Content from "../Layout/Content";
+import PokemonDetailsEvolutions from "./PokemonDetails/PokemonDetailsEvolutions";
 import PokemonDetailsHeader from "./PokemonDetails/PokemonDetailsHeader";
 import PokemonDetailsMoves from "./PokemonDetails/PokemonDetailsMoves";
 import ViabilityContainer from "./PokemonDetails/ViabilityContainer";
@@ -37,6 +38,9 @@ function PokemonDetails() {
           />
 
           <PokemonDetailsMoves pokemon={pokemon} />
+
+          <PokemonDetailsEvolutions pokemonId={pokemon.id} evolutions={pokemon.evolutions} />
+
         </div>
       )}
     </Content>

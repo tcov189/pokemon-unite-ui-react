@@ -1,4 +1,4 @@
-export const baseUrl = "https://pokemon-unite-api.trevor-builds-apps.com"
+export const baseUrl = "http://pokemon-unite-api.test"
 
 export const uniteApiUrl = `${baseUrl}/api`;
 
