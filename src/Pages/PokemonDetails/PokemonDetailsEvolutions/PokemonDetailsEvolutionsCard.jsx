@@ -1,12 +1,17 @@
-import React from 'react'
-import { baseUrl } from '../../../services/pokemonUniteApiService'
+import React from "react";
 
-function PokemonDetailsEvolutionsCard({evo, pokemonId}) {
-    return (
-        <div className="flex flex-col capitalize">
-            <img style={{maxWidth: "100px"}} src={`${baseUrl}/images/pokemon/${pokemonId}/stage_${evo.stage}.png`} alt="Pokemon stage" />
-        </div>
-    )
+function PokemonDetailsEvolutionsCard({ evo, pokemonId }) {
+  const iconUrl = `images/pokemon/${pokemonId}/stage_${evo.stage}.png`;
+
+  return (
+    <div className="flex flex-col capitalize">
+      <img
+        style={{ maxWidth: "100px" }}
+        src={require(`@/${iconUrl}`).default}
+        alt="Pokemon stage"
+      />
+    </div>
+  );
 }
 
-export default PokemonDetailsEvolutionsCard
+export default PokemonDetailsEvolutionsCard;

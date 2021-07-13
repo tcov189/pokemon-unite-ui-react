@@ -7,10 +7,9 @@ function MoveIcon({
   height = "60px",
   width = "60px",
 }) {
+  const iconUrl = moveIconPath ? `${moveIconPath}` : null;
+
   const backgroundStyle = {
-    backgroundImage: moveIconPath ? `url(${moveIconPath})` : null,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
     width,
     height,
   };
@@ -20,13 +19,15 @@ function MoveIcon({
   }
 
   return (
-    <div
+    <img
+      src={require(`@/${iconUrl}`).default}
+      alt="move"
       className={`cursor rounded-full ${
         isActive ? "border-2 border-yellow-500" : null
       }`}
       style={backgroundStyle}
       onClick={onClick}
-    ></div>
+    />
   );
 }
 
