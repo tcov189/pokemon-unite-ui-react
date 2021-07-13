@@ -1,24 +1,36 @@
 {
   "files": {
     "main.css": "/pokemon-unite-ui-react/static/css/main.7fb5cffa.chunk.css",
-    "main.js": "/pokemon-unite-ui-react/static/js/main.c34e4858.chunk.js",
-    "main.js.map": "/pokemon-unite-ui-react/static/js/main.c34e4858.chunk.js.map",
-    "runtime-main.js": "/pokemon-unite-ui-react/static/js/runtime-main.05c6c8f4.js",
-    "runtime-main.js.map": "/pokemon-unite-ui-react/static/js/runtime-main.05c6c8f4.js.map",
-    "static/js/2.e58459ae.chunk.js": "/pokemon-unite-ui-react/static/js/2.e58459ae.chunk.js",
-    "static/js/2.e58459ae.chunk.js.map": "/pokemon-unite-ui-react/static/js/2.e58459ae.chunk.js.map",
-    "static/js/3.d9d3fbb5.chunk.js": "/pokemon-unite-ui-react/static/js/3.d9d3fbb5.chunk.js",
-    "static/js/3.d9d3fbb5.chunk.js.map": "/pokemon-unite-ui-react/static/js/3.d9d3fbb5.chunk.js.map",
+    "main.js": "/pokemon-unite-ui-react/static/js/main.f8ccb93e.chunk.js",
+    "main.js.map": "/pokemon-unite-ui-react/static/js/main.f8ccb93e.chunk.js.map",
+    "runtime-main.js": "/pokemon-unite-ui-react/static/js/runtime-main.7d5b03ea.js",
+    "runtime-main.js.map": "/pokemon-unite-ui-react/static/js/runtime-main.7d5b03ea.js.map",
+    "static/js/2.81b38fdb.chunk.js": "/pokemon-unite-ui-react/static/js/2.81b38fdb.chunk.js",
+    "static/js/2.81b38fdb.chunk.js.map": "/pokemon-unite-ui-react/static/js/2.81b38fdb.chunk.js.map",
+    "static/js/3.c4a3d5af.chunk.js": "/pokemon-unite-ui-react/static/js/3.c4a3d5af.chunk.js",
+    "static/js/3.c4a3d5af.chunk.js.map": "/pokemon-unite-ui-react/static/js/3.c4a3d5af.chunk.js.map",
     "index.html": "/pokemon-unite-ui-react/index.html",
     "service-worker.js": "/pokemon-unite-ui-react/service-worker.js",
     "service-worker.js.map": "/pokemon-unite-ui-react/service-worker.js.map",
     "static/css/main.7fb5cffa.chunk.css.map": "/pokemon-unite-ui-react/static/css/main.7fb5cffa.chunk.css.map",
-    "static/js/2.e58459ae.chunk.js.LICENSE.txt": "/pokemon-unite-ui-react/static/js/2.e58459ae.chunk.js.LICENSE.txt"
+    "static/js/2.81b38fdb.chunk.js.LICENSE.txt": "/pokemon-unite-ui-react/static/js/2.81b38fdb.chunk.js.LICENSE.txt",
+    "static/media/basic_attack.png": "/pokemon-unite-ui-react/static/media/basic_attack.a5e4c5a3.png",
+    "static/media/profile.png": "/pokemon-unite-ui-react/static/media/profile.f9f4d65d.png",
+    "static/media/special_1.png": "/pokemon-unite-ui-react/static/media/special_1.2950681a.png",
+    "static/media/special_1a.png": "/pokemon-unite-ui-react/static/media/special_1a.d2a49953.png",
+    "static/media/special_1b.png": "/pokemon-unite-ui-react/static/media/special_1b.dfb68f67.png",
+    "static/media/special_2.png": "/pokemon-unite-ui-react/static/media/special_2.bbf4f4c4.png",
+    "static/media/special_2a.png": "/pokemon-unite-ui-react/static/media/special_2a.d44830df.png",
+    "static/media/special_2b.png": "/pokemon-unite-ui-react/static/media/special_2b.f7da3e72.png",
+    "static/media/stage_1.png": "/pokemon-unite-ui-react/static/media/stage_1.f9e62523.png",
+    "static/media/stage_2.png": "/pokemon-unite-ui-react/static/media/stage_2.f8db804f.png",
+    "static/media/stage_3.png": "/pokemon-unite-ui-react/static/media/stage_3.b7ca61b0.png",
+    "static/media/unite.png": "/pokemon-unite-ui-react/static/media/unite.e77c9724.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.05c6c8f4.js",
-    "static/js/2.e58459ae.chunk.js",
+    "static/js/runtime-main.7d5b03ea.js",
+    "static/js/2.81b38fdb.chunk.js",
     "static/css/main.7fb5cffa.chunk.css",
-    "static/js/main.c34e4858.chunk.js"
+    "static/js/main.f8ccb93e.chunk.js"
   ]
 }
