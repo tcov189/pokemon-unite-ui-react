@@ -6,24 +6,20 @@ function useActivePokemon(id) {
 
   const callApi = async (id) => {
     try {
-      // const cache = localStorage.getItem(`pokemon_${id}`);
+      const cache = localStorage.getItem(`pokemon_${id}`);
 
-      // if (cache) {
-      //   setActivePokemon(JSON.parse(cache));
-      // } else {
-      //   const res = await getPokemon(id);
-
-      //   setActivePokemon(res.data.pokemon);
-
-      //   localStorage.setItem(
-      //     `pokemon_${id}`,
-      //     JSON.stringify(res.data.pokemon)
-      //   );
-      // }
-
-      const res = await getPokemon(id);
+      if (cache) {
+        setActivePokemon(JSON.parse(cache));
+      } else {
+        const res = await getPokemon(id);
 
         setActivePokemon(res.data.pokemon);
+
+        localStorage.setItem(
+          `pokemon_${id}`,
+          JSON.stringify(res.data.pokemon)
+        );
+      }
     } catch (error) {
       console.error(error);
     }
