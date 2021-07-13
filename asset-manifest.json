@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/pokemon-unite-ui-react/static/css/main.7fb5cffa.chunk.css",
-    "main.js": "/pokemon-unite-ui-react/static/js/main.e03967bc.chunk.js",
-    "main.js.map": "/pokemon-unite-ui-react/static/js/main.e03967bc.chunk.js.map",
+    "main.js": "/pokemon-unite-ui-react/static/js/main.d28a05b5.chunk.js",
+    "main.js.map": "/pokemon-unite-ui-react/static/js/main.d28a05b5.chunk.js.map",
     "runtime-main.js": "/pokemon-unite-ui-react/static/js/runtime-main.7d5b03ea.js",
     "runtime-main.js.map": "/pokemon-unite-ui-react/static/js/runtime-main.7d5b03ea.js.map",
-    "static/js/2.81b38fdb.chunk.js": "/pokemon-unite-ui-react/static/js/2.81b38fdb.chunk.js",
-    "static/js/2.81b38fdb.chunk.js.map": "/pokemon-unite-ui-react/static/js/2.81b38fdb.chunk.js.map",
+    "static/js/2.19eae6ba.chunk.js": "/pokemon-unite-ui-react/static/js/2.19eae6ba.chunk.js",
+    "static/js/2.19eae6ba.chunk.js.map": "/pokemon-unite-ui-react/static/js/2.19eae6ba.chunk.js.map",
     "static/js/3.c4a3d5af.chunk.js": "/pokemon-unite-ui-react/static/js/3.c4a3d5af.chunk.js",
     "static/js/3.c4a3d5af.chunk.js.map": "/pokemon-unite-ui-react/static/js/3.c4a3d5af.chunk.js.map",
     "index.html": "/pokemon-unite-ui-react/index.html",
     "service-worker.js": "/pokemon-unite-ui-react/service-worker.js",
     "service-worker.js.map": "/pokemon-unite-ui-react/service-worker.js.map",
     "static/css/main.7fb5cffa.chunk.css.map": "/pokemon-unite-ui-react/static/css/main.7fb5cffa.chunk.css.map",
-    "static/js/2.81b38fdb.chunk.js.LICENSE.txt": "/pokemon-unite-ui-react/static/js/2.81b38fdb.chunk.js.LICENSE.txt",
+    "static/js/2.19eae6ba.chunk.js.LICENSE.txt": "/pokemon-unite-ui-react/static/js/2.19eae6ba.chunk.js.LICENSE.txt",
     "static/media/basic_attack.png": "/pokemon-unite-ui-react/static/media/basic_attack.a5e4c5a3.png",
     "static/media/profile.png": "/pokemon-unite-ui-react/static/media/profile.f9f4d65d.png",
     "static/media/special_1.png": "/pokemon-unite-ui-react/static/media/special_1.2950681a.png",
@@ -29,8 +29,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.7d5b03ea.js",
-    "static/js/2.81b38fdb.chunk.js",
+    "static/js/2.19eae6ba.chunk.js",
     "static/css/main.7fb5cffa.chunk.css",
-    "static/js/main.e03967bc.chunk.js"
+    "static/js/main.d28a05b5.chunk.js"
   ]
 }
