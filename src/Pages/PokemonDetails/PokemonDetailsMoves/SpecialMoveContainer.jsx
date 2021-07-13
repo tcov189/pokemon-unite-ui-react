@@ -25,7 +25,7 @@ function SpecialMoveContainer({ pokemonId, moves, type }) {
           <div className="flex my-2">
             <MoveIcon
               moveName={moves[1].name}
-              moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${imageFileNamePrefix}a.png`}
+              moveIconPath={`images/pokemon/${pokemonId}/${imageFileNamePrefix}a.png`}
               onClick={() => setActiveTab("a")}
               isActive={activeTab === "a"}
             />
@@ -38,7 +38,7 @@ function SpecialMoveContainer({ pokemonId, moves, type }) {
           <div className="flex">
             <MoveIcon
               moveName={moves[2].name}
-              moveIconPath={`${baseUrl}/images/pokemon/${pokemonId}/${imageFileNamePrefix}b.png`}
+              moveIconPath={`images/pokemon/${pokemonId}/${imageFileNamePrefix}b.png`}
               onClick={() => setActiveTab("b")}
               isActive={activeTab === "b"}
             />
