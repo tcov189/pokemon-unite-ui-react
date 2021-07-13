@@ -79,7 +79,7 @@ function PokemonList() {
                 return (
                   <Link
                     key={pokemon.id}
-                    to={`pokemon/${pokemon.id}`}
+                    to={`/pokemon/${pokemon.id}`}
                     style={{
                       flexBasis: "45%",
                     }}
