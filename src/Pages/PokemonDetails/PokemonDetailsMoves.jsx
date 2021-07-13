@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { baseUrl } from "../../services/pokemonUniteApiService";
 import MoveCard from "./PokemonDetailsMoves/MoveCard";
 import MoveIcon from "./PokemonDetailsMoves/MoveIcon";
 import SpecialMoveContainer from "./PokemonDetailsMoves/SpecialMoveContainer";
@@ -47,35 +46,35 @@ function PokemonDetailsMoves({ pokemon }) {
       <div className="flex w-full justify-between p-1 shadow-md">
         <MoveIcon
           moveName={`${pokemon.ability_name} icon`}
-          moveIconPath={`${baseUrl}/images/pokemon/${pokemon.id}/ability.png`}
+          moveIconPath={`images/pokemon/${pokemon.id}/ability.png`}
           onClick={() => setActiveTab("ability")}
           isActive={activeTab === "ability"}
         />
 
         <MoveIcon
           moveName="Basic attack icon"
-          moveIconPath={`${baseUrl}/images/icons/basic_attack.png`}
+          moveIconPath={`images/icons/basic_attack.png`}
           onClick={() => setActiveTab("basic")}
           isActive={activeTab === "basic"}
         />
 
         <MoveIcon
           moveName={special1Image.name}
-          moveIconPath={`${baseUrl}/images/pokemon/${pokemon.id}/special_1.png`}
+          moveIconPath={`images/pokemon/${pokemon.id}/special_1.png`}
           onClick={() => setActiveTab("special_1")}
           isActive={activeTab === "special_1"}
         />
 
         <MoveIcon
           moveName={special2Image.name}
-          moveIconPath={`${baseUrl}/images/pokemon/${pokemon.id}/special_2.png`}
+          moveIconPath={`images/pokemon/${pokemon.id}/special_2.png`}
           onClick={() => setActiveTab("special_2")}
           isActive={activeTab === "special_2"}
         />
 
         <MoveIcon
           moveName={uniteAttack.name}
-          moveIconPath={`${baseUrl}/images/pokemon/${pokemon.id}/unite.png`}
+          moveIconPath={`images/pokemon/${pokemon.id}/unite.png`}
           onClick={() => setActiveTab("unite")}
           isActive={activeTab === "unite"}
         />
