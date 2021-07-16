@@ -1,7 +1,29 @@
-export const baseUrl = "https://pokemon-unite-api.trevor-builds-apps.com"
+export const baseUrl = "https://pokemon-unite-api.trevor-builds-apps.com";
 
 export const uniteApiUrl = `${baseUrl}/api`;
 
+export async function getApiInfo() {
+  const query = `
+  {
+    api_info(is_current: 1) {
+      id
+      version
+    }
+}`;
+
+  const result = await fetch(uniteApiUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query: query,
+      variables: {},
+    }),
+  });
+
+  return await result.json();
+}
 
 export async function fetchAllPokemon() {
   const query = `
@@ -14,19 +36,16 @@ export async function fetchAllPokemon() {
     }
 }`;
 
-  const result = await fetch(
-    uniteApiUrl,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        query: query,
-        variables: {},
-      }),
-    }
-  );
+  const result = await fetch(uniteApiUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query: query,
+      variables: {},
+    }),
+  });
 
   return await result.json();
 }
@@ -67,18 +86,15 @@ export async function getPokemon(id) {
     }
   }`;
 
-  const result = await fetch(
-    uniteApiUrl,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        query: query,
-      }),
-    }
-  );
+  const result = await fetch(uniteApiUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      query: query,
+    }),
+  });
 
   return await result.json();
 }
